@@ -21,6 +21,13 @@ FlowRouter.route('/upload', {
   },
 });
 
+FlowRouter.route('/recipe-book', {
+  name: 'recipes',
+  action() {
+    BlazeLayout.render('App_body', { main: 'recipes' });
+  },
+});
+
 FlowRouter.notFound = {
   action() {
     BlazeLayout.render('App_body', { main: 'App_notFound' });
